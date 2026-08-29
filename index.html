@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ===== META INFORMATION ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UnitConverters.net - Fast, free online unit converter with 35+ converters. Convert length, weight, temperature, volume, and more instantly!">
+    <meta name="keywords" content="unit converter, length converter, weight converter, temperature converter, volume converter, conversion calculator">
+    <meta name="author" content="Your Company Name">
+    
+    <!-- ===== PAGE TITLE ===== -->
+    <title>Unit Converters - Convert Any Unit Instantly</title>
+    
+    <!-- ===== EXTERNAL STYLESHEETS ===== -->
+    <!-- Link to main stylesheet (all CSS is in styles.css) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ===== MAIN CONTAINER ===== -->
+    <div class="container">
+        
+        <!-- ===== HEADER SECTION ===== -->
+        <header>
+            <h1>🔄 UnitConverters.net</h1>
+            <p>Fast, Free Unit Conversion Tool</p>
+            <p class="subtitle">Convert 35+ Units Instantly & Accurately</p>
+        </header>
+
+        <!-- ===== SEARCH BAR SECTION ===== -->
+        <div class="search-section">
+            <!-- Search input field with live results -->
+            <div class="search-wrapper">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput" 
+                    placeholder="Search converters... (e.g., 'cm to inches', 'kg to lbs')"
+                    autocomplete="off"
+                >
+            </div>
+            <!-- Search results dropdown - populated by JavaScript -->
+            <div class="search-results" id="searchResults"></div>
+        </div>
+
+        <!-- ===== QUICK CONVERTERS SECTION ===== -->
+        <div class="quick-section">
+            <h2>Unit Converter Express</h2>
+            
+            <!-- Category tabs - allows quick switching between converters -->
+            <div class="quick-title">Quick Conversion</div>
+            <div class="category-tabs" id="quickTabs">
+                <!-- Generated dynamically by JavaScript -->
+            </div>
+
+            <!-- ===== MAIN CONVERSION INPUT AREA ===== -->
+            <!-- This is the main converter that users interact with -->
+            <!-- ID: converterWrapper - used for smooth scroll animation -->
+            <div class="converter-row" id="converterWrapper">
+                <!-- FROM UNIT INPUT -->
+                <div class="input-group">
+                    <label for="fromValue">From:</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="number" 
+                            id="fromValue" 
+                            placeholder="Enter value" 
+                            step="any"
+                        >
+                        <select id="fromUnit">
+                            <option>Select Unit</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- SWAP UNITS BUTTON -->
+                <!-- Clicking this swaps the from/to units and values -->
+                <button class="swap-btn" id="swapBtn" title="Swap units">⇅</button>
+
+                <!-- TO UNIT OUTPUT -->
+                <div class="input-group">
+                    <label for="toValue">To:</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="number" 
+                            id="toValue" 
+                            placeholder="Result" 
+                            readonly
+                        >
+                        <select id="toUnit">
+                            <option>Select Unit</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Displays conversion result as text -->
+            <div class="info-text" id="conversionInfo"></div>
+        </div>
+
+        <!-- ===== POPULAR CONVERSIONS SECTION ===== -->
+        <!-- Shows common conversions for the selected converter -->
+        <div class="common-section" id="commonSection">
+            <h3>🔥 Popular Conversions</h3>
+            <!-- Grid of clickable common conversions -->
+            <div class="common-grid" id="commonGrid">
+                <!-- Generated dynamically by JavaScript -->
+            </div>
+        </div>
+
+        <!-- ===== ALL CONVERTERS BY CATEGORY ===== -->
+        <!-- Displays all available converters organized by category -->
+        <div id="converterCategories">
+            <!-- Generated dynamically by JavaScript -->
+        </div>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <!-- Educational content about units and measurement systems -->
+        <div class="about-section">
+            <h3>About Unit Converters</h3>
+            <p>
+                <strong>A unit</strong> is a measurement of a quantity that is defined or adopted by tradition or law. Other quantities can be expressed as a multiple of the unit.
+            </p>
+            <p>
+                In human history, various unit systems were developed and used in different regions and cultures. Currently, the global standard of measurement is the <strong>International System of Units (SI)</strong>, which is a modern form of the metric system. Although SI is intended for global use, it has not been fully adopted, and some other systems of measurement are still used in parts of the world.
+            </p>
+            <p>
+                The intent of this site is to provide a convenient means to convert between the various units of measurement within different systems, as well as to provide a basic understanding of the systems currently in use, and how they interact.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <!-- Footer with links and copyright information -->
+    <footer>
+        <div class="footer-links">
+            <a href="#about">About Us</a> | 
+            <a href="#terms">Terms of Use</a> | 
+            <a href="#privacy">Privacy Policy</a> | 
+            <a href="#sitemap">Sitemap</a>
+        </div>
+        <div class="footer-copyright">
+            © 2024 UnitConverters.net | All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- ===== EXTERNAL SCRIPTS ===== -->
+    <!-- Link to main JavaScript file (all logic is in script.js) -->
+    <script src="script.js"></script>
+</body>
+</html>
